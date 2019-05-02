@@ -1,0 +1,148 @@
+{
+  "contractName": "SolnSquareVerifier",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.2+commit.1df8f40c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/py/IdeaProjects/Blockchain-ND-Capstone/eth-contracts/contracts/SolnSquareVerifier.sol\":\"SolnSquareVerifier\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/py/IdeaProjects/Blockchain-ND-Capstone/eth-contracts/contracts/SolnSquareVerifier.sol\":{\"keccak256\":\"0x620be167f006f0034f2de9b775072c69b53124dd6e2048678215a0bf3909485c\",\"urls\":[\"bzzr://c44a2c3b42fa171809d6a1931b41d96b86744670a37f0d27d02ba1d6fe903cde\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a723058204e3d5d2ab6a20d1f96240f473a386c2876de113d87232180bdba3fdcf73206630029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058204e3d5d2ab6a20d1f96240f473a386c2876de113d87232180bdba3fdcf73206630029",
+  "sourceMap": "64:32:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:32:7;;;;;;;",
+  "deployedSourceMap": "64:32:7:-;;;;;",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\n\ncontract SquareVerifier {\n\n}\n\ncontract SolnSquareVerifier {\n\n}\n\n// TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>\n\n\n\n// TODO define another contract named SolnSquareVerifier that inherits from your ERC721Mintable class\n\n\n\n// TODO define a solutions struct that can hold an index & an address\n\n\n// TODO define an array of the above struct\n\n\n// TODO define a mapping to store unique solutions submitted\n\n\n\n// TODO Create an event to emit when a solution is added\n\n\n\n// TODO Create a function to add the solutions to the array and emit the event\n\n\n\n// TODO Create a function to mint new NFT only after the solution has been verified\n//  - make sure the solution is unique (has not been used before)\n//  - make sure you handle metadata as well as tokenSuplly\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+  "sourcePath": "/Users/py/IdeaProjects/Blockchain-ND-Capstone/eth-contracts/contracts/SolnSquareVerifier.sol",
+  "ast": {
+    "absolutePath": "/Users/py/IdeaProjects/Blockchain-ND-Capstone/eth-contracts/contracts/SolnSquareVerifier.sol",
+    "exportedSymbols": {
+      "SolnSquareVerifier": [
+        17997
+      ],
+      "SquareVerifier": [
+        17996
+      ]
+    },
+    "id": 17998,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 17995,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 17996,
+        "linearizedBaseContracts": [
+          17996
+        ],
+        "name": "SquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 17998,
+        "src": "34:28:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 17997,
+        "linearizedBaseContracts": [
+          17997
+        ],
+        "name": "SolnSquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 17998,
+        "src": "64:32:7"
+      }
+    ],
+    "src": "0:876:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/py/IdeaProjects/Blockchain-ND-Capstone/eth-contracts/contracts/SolnSquareVerifier.sol",
+    "exportedSymbols": {
+      "SolnSquareVerifier": [
+        17997
+      ],
+      "SquareVerifier": [
+        17996
+      ]
+    },
+    "id": 17998,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 17995,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 17996,
+        "linearizedBaseContracts": [
+          17996
+        ],
+        "name": "SquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 17998,
+        "src": "34:28:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 17997,
+        "linearizedBaseContracts": [
+          17997
+        ],
+        "name": "SolnSquareVerifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 17998,
+        "src": "64:32:7"
+      }
+    ],
+    "src": "0:876:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.2+commit.1df8f40c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-05-02T19:15:07.351Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
