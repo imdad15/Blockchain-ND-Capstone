@@ -1,0 +1,16 @@
+{
+  "name": "minter",
+  "version": "1.0.0",
+  "description": "mint one Awesome Realty Token in Rinkeby Network",
+  "main": "mint.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yury Prokashev",
+  "license": "ISC",
+  "dependencies": {
+    "truffle-contract": "^4.0.12",
+    "web3": "^1.0.0-beta.52",
+    "truffle-hdwallet-provider": "^1.0.8"
+  }
+}
