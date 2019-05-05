@@ -12,7 +12,11 @@
 > cd eth-contracts
 > truffle compile
 ```
-5. Run automated tests
+5. Start Ganache-cli
+```bash
+> ganache-cli
+```
+6. Run automated tests
 ```bash
 > truffle test
 ```
