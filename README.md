@@ -5,15 +5,16 @@
 2. Open the Terminal at this folder
 3. Install dependencies
 ```bash
-npm install
+> npm install
 ```
 4. Compile contracts
 ```bash
-truffle compile
+> cd eth-contracts
+> truffle compile
 ```
 5. Run automated tests
 ```bash
-truffle test
+> truffle test
 ```
 
 ## Contract
