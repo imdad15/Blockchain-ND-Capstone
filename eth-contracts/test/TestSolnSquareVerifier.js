@@ -83,13 +83,16 @@ contract("SolnSquareVerifier", (accounts, web3) =>{
             await this.contract.mint(TEST.firstTokenRecipient, tokensBefore + 1, {from: TEST.contractOwner});
             let tokensAfter = await this.contract.totalSupply.call();
             assert.strictEqual(tokensAfter - tokensBefore, 1, "Unexpected total token supply");
+
+            let tokenUri = await this.contract.tokenURI.call(tokensBefore + 1);
+            assert.strictEqual(tokenUri.includes(`${TEST.baseTokeURI}1`), true, "Unexpected token URI");
         });
 
         it("can not mint a token when there is no solution for to address", async function () {
             let tokensBefore = await this.contract.totalSupply.call();
             try {
                 await this.contract.mint(TEST.firstTokenRecipient, tokensBefore + 1, {from: TEST.contractOwner});
-                assert.failt("Token can not be minted when there is no solution available for to address, but it has just happened");
+                assert.fail("Token can not be minted when there is no solution available for to address, but it has just happened");
             }catch (e) {
                 assert.strictEqual(e.message.includes("Solution does not exist"), true, "Unexpected error message");
             }

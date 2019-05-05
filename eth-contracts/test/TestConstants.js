@@ -27,6 +27,7 @@ module.exports = function (accounts, web3){
             secondTokenRecipient: accounts[2],
             tokenName: "My Test Token",
             tokenSymbol: "TSTKN",
+            baseTokeURI: "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/",
             tokenRecipients: [accounts[1], accounts[2], accounts[3], accounts[4], accounts[5]],
             firstToken: {
                 id: 1

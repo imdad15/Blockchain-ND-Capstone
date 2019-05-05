@@ -16,8 +16,23 @@ truffle compile
 truffle test
 ```
 
-## Contract on Rinkeby
-Address: `0xfd15F76438E773C274e12198A254BFB95F125888`
+## Contract
+1. [Contract on Rinkeby](https://rinkeby.etherscan.io/address/0x4694d4f79E3124DB140C47764c37c5811f56E10e)
+2. [Awesome Reality Token Tracker on Rinkeby Network](https://rinkeby.etherscan.io/token/0x4694d4f79E3124DB140C47764c37c5811f56E10e)
+3. [Awesome Realty OpenSea Storefront](https://rinkeby.opensea.io/category/awesomerealty)
+## Awesome Realty Properties
+### Sold
+1. [Coxy family house](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/1)
+2. [Luxury Home](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/2)
+3. [Manufacturing Warehouse](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/3)
+4. [Small Condo](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/4)
+5. [Floating House](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/5)
+### Remaining
+1. [Link to home 6](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/6)
+2. [Link to home 7](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/7)
+3. [Link to home 8](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/8)
+4. [Link to home 9](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/9)
+5. [Link to home 10](https://rinkeby.opensea.io/assets/0x4694d4f79e3124db140c47764c37c5811f56e10e/10)
 
 # Project Resources
 
