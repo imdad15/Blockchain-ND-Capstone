@@ -1,6 +1,23 @@
 # Udacity Blockchain Capstone
 
-The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product. 
+## How to test contracts locally?
+1. Download this repo and unzip it to the folder
+2. Open the Terminal at this folder
+3. Install dependencies
+```bash
+npm install
+```
+4. Compile contracts
+```bash
+truffle compile
+```
+5. Run automated tests
+```bash
+truffle test
+```
+
+## Contract on Rinkeby
+Address: `0xfd15F76438E773C274e12198A254BFB95F125888`
 
 # Project Resources
 

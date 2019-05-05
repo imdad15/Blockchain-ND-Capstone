@@ -202,7 +202,7 @@ contract ERC721 is Pausable, ERC165 {
      * @param approved representing the status of the approval to be set
      */
     function setApprovalForAll(address to, bool approved) public {
-        require(to != msg.sender);
+        require(to != msg.sender, "Message sender is equal to token recipient address");
         _operatorApprovals[msg.sender][to] = approved;
         emit ApprovalForAll(msg.sender, to, approved);
     }
@@ -218,7 +218,7 @@ contract ERC721 is Pausable, ERC165 {
     }
 
     function transferFrom(address from, address to, uint256 tokenId) public {
-        require(_isApprovedOrOwner(msg.sender, tokenId));
+        require(_isApprovedOrOwner(msg.sender, tokenId), "Not approved or not owner˚");
 
         _transferFrom(from, to, tokenId);
     }
@@ -229,7 +229,7 @@ contract ERC721 is Pausable, ERC165 {
 
     function safeTransferFrom(address from, address to, uint256 tokenId, bytes memory _data) public {
         transferFrom(from, to, tokenId);
-        require(_checkOnERC721Received(from, to, tokenId, _data));
+        require(_checkOnERC721Received(from, to, tokenId, _data), "Token is not received");
     }
 
     /**
@@ -277,13 +277,13 @@ contract ERC721 is Pausable, ERC165 {
     function _transferFrom(address from, address to, uint256 tokenId) internal {
 
         // TODO: require from address is the owner of the given token
-        require(_isApprovedOrOwner(msg.sender, tokenId));
+        require(_isApprovedOrOwner(msg.sender, tokenId), "Token transfer is not approved or not owner");
         // TODO: require token is being transfered to valid address
-        require(to != address(0));
+        require(to != address(0), "Transfer to address 0 is prohibited");
         // TODO: clear approval
 
         // TODO: update token counts & transfer ownership of the token ID 
-        require(ownerOf(tokenId) == from);
+        require(ownerOf(tokenId) == from, "Token owner address is not from");
         _ownedTokensCount[from].decrement();
         _tokenOwner[tokenId] = address(0);
 
@@ -357,7 +357,7 @@ contract ERC721Enumerable is ERC165, ERC721 {
      * @return uint256 token ID at the given index of the tokens list owned by the requested address
      */
     function tokenOfOwnerByIndex(address owner, uint256 index) public view returns (uint256) {
-        require(index < balanceOf(owner));
+        require(index < balanceOf(owner), "Balance of owner is less than index");
         return _ownedTokens[owner][index];
     }
 
@@ -376,7 +376,7 @@ contract ERC721Enumerable is ERC165, ERC721 {
      * @return uint256 token ID at the given index of the tokens list
      */
     function tokenByIndex(uint256 index) public view returns (uint256) {
-        require(index < totalSupply());
+        require(index < totalSupply(), "Total supply is less than index");
         return _allTokens[index];
     }
 
@@ -521,7 +521,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
     }
 
     // TODO: [+] create external getter functions for name, symbol, and baseTokenURI
-    function getName()
+    function name()
     external
     view
     returns (string memory)
@@ -529,7 +529,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         return _name;
     }
 
-    function getSymbol()
+    function symbol()
     external
     view
     returns (string memory)
@@ -537,7 +537,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         return _symbol;
     }
 
-    function getBaseTokenURI()
+    function baseTokenURI()
     external
     view
     returns (string memory)
@@ -546,7 +546,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
     }
 
     function tokenURI(uint256 tokenId) external view returns (string memory) {
-        require(_exists(tokenId));
+        require(_exists(tokenId), "Token does not exist");
         return _tokenURIs[tokenId];
     }
 

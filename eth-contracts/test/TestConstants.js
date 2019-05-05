@@ -5,18 +5,26 @@ const fs = require("fs");
 module.exports = function (accounts, web3){
     var result;
     let correctProofFile = fs.readFileSync(
-        "/Users/py/IdeaProjects/Blockchain-Capstone/zokrates/code/square/proof.json",
+        "/Users/py/IdeaProjects/Blockchain-ND-Capstone/zokrates/code/square/proof3.json",
         "utf-8"
     );
     let badProofFile = fs.readFileSync(
-        "/Users/py/IdeaProjects/Blockchain-Capstone/zokrates/code/square/badProof.json",
+        "/Users/py/IdeaProjects/Blockchain-ND-Capstone/zokrates/code/square/badProof.json",
+        "utf-8"
+    );
+    let secondCorrectProofFile = fs.readFileSync(
+        "/Users/py/IdeaProjects/Blockchain-ND-Capstone/zokrates/code/square/proof12.json",
         "utf-8"
     );
     let correctProof = JSON.parse(correctProofFile);
     let badProof = JSON.parse(badProofFile);
+    let secondCorrectProof = JSON.parse(secondCorrectProofFile);
+
     try {
         result = {
             contractOwner: accounts[0],
+            firstTokenRecipient: accounts[1],
+            secondTokenRecipient: accounts[2],
             tokenName: "My Test Token",
             tokenSymbol: "TSTKN",
             tokenRecipients: [accounts[1], accounts[2], accounts[3], accounts[4], accounts[5]],
@@ -40,6 +48,8 @@ module.exports = function (accounts, web3){
             correctInput: correctProof.input,
             badProof: badProof.proof,
             badInput: badProof.input,
+            secondCorrectProof: secondCorrectProof.proof,
+            secondCorrectInput: secondCorrectProof.input,
             toBN: function(str){
                 return web3.utils.toBN(str);
             },
